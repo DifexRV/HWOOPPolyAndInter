@@ -1,4 +1,4 @@
-package org.example;
+package org.example.model;
 
 public class Bicycle extends Vehicle {
     public Bicycle(String modelName, int wheelsCount) {

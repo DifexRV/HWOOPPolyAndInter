@@ -1,4 +1,4 @@
-package org.example;
+package org.example.model;
 
 public abstract class Vehicle {
 
@@ -31,6 +31,5 @@ public abstract class Vehicle {
         return ("Вид транспортного средства: " + getModelName() + ". Количество колес: " + getWheelsCount() + ".");
 
     }
-
 
 }
