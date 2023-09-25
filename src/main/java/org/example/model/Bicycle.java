@@ -5,4 +5,10 @@ public class Bicycle extends Vehicle {
         super(modelName, wheelsCount);
     }
 
+
+    @Override
+    public void check() {
+        super.check();
+    }
+
 }

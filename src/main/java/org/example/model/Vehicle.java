@@ -1,6 +1,6 @@
 package org.example.model;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Checkable{
 
     private String modelName;
     private int wheelsCount;
@@ -14,22 +14,23 @@ public abstract class Vehicle {
         return modelName;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
     public int getWheelsCount() {
         return wheelsCount;
     }
 
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
+    private void welcomeMessage() {
+        System.out.println("Обслуживаем " + modelName);
     }
 
-    public String toString(){
+    private void updateTyre(int wheels) {
+        for (int i = 1; i <= wheels; i++) {
+            System.out.println("Меняем покрышку");
+        }
+    }
 
-        return ("Вид транспортного средства: " + getModelName() + ". Количество колес: " + getWheelsCount() + ".");
-
+    public void check() {
+        welcomeMessage();
+        updateTyre(wheelsCount);
     }
 
 }
